@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Adicionar emprego</title>
+    </head>
+    <body>
+        <h1>Cadastro de empregos</h1>
+        <form action="#" th:action="@{/cadastrar}" th:object="${emprego}" method="post" >
+            Titulo: <input type="text" th:field="*{titulo}" >
+            <span th:if="${#fields.hasErrors('titulo')}" th:errors="*{titulo}"/>
+            <br>
+            Empresa: <input type="text" th:field="*{empresa}" >
+            <span th:if="${#fields.hasErrors('empresa')}" th:errors="*{empresa}"/>
+            <br>
+            Descrição: <textarea rows="3" th:field="*{descricao}"/>
+            <span th:if="${#fields.hasErrors('descricao')}" th:errors="*{descricao}"/>
+            <br>
+            <input type="submit" value="Cadastrar" >
+        </form>
+    </body>
+</html>
