@@ -1,0 +1,8 @@
+Spring Data & JPA
+Spring Security
+Login com Spring Security
+Roles & Permissions
+Autenticação na Base de Dados
+Thymeleaf Engine
+Bootstrap
+Deployment to AWS e Heroku
