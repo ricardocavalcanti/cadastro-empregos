@@ -12,6 +12,11 @@ public class HomeController {
         return "login";
     }
 
+    @RequestMapping("/admin")
+    public String admin(){
+        return "admin";
+    }
+
     // Significa que iremos rodar em localhost:8080
     @RequestMapping("/")
     public String homeApp(Model model){
