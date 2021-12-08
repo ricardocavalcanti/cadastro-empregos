@@ -28,6 +28,7 @@ public class Usuario {
     @Column(name="usuario")
     private String usuario;
 
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(joinColumns = @JoinColumn(name= "usuario_id"),
         inverseJoinColumns = @JoinColumn(name= "regra_id"))
     private Collection<Regra> regras;

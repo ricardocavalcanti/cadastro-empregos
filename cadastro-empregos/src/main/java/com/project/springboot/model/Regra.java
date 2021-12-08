@@ -20,10 +20,6 @@ public class Regra {
 
     }
 
-    public Regra (String regra){
-        this.regra = regra;
-    }
-
     public Long getId() {
         return id;
     }
@@ -47,5 +43,4 @@ public class Regra {
     public void setUsuarios(Collection<Usuario> usuarios) {
         this.usuarios = usuarios;
     }
-
 }

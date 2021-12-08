@@ -1,6 +1,7 @@
 package com.project.springboot.security.configuration;
 
 import com.project.springboot.repository.UsuarioRepository;
+import com.project.springboot.security.services.SSUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +23,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     @Autowired
-    private SSUserDetailService  userDetailService;
+    private SSUserDetailService userDetailService;
 
     @Autowired
     private UsuarioRepository usuarioRepository;

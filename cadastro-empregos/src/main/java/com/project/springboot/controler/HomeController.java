@@ -12,15 +12,22 @@ public class HomeController {
         return "login";
     }
 
+    // Significa que iremos rodar em localhost:8080
+    @RequestMapping("/")
+    public String index(Model model){
+        model.addAttribute("mensagem", "Sistema de cadastro de empregos");
+        return "index";
+    }
+
     @RequestMapping("/admin")
     public String admin(){
         return "admin";
     }
 
-    // Significa que iremos rodar em localhost:8080
-    @RequestMapping("/")
-    public String homeApp(Model model){
-        model.addAttribute("mensagem", "Sistema de cadastro de empregos");
-        return "index";
+    @RequestMapping("/secure")
+    public String secure(){
+        return "secure";
     }
+
+
 }
