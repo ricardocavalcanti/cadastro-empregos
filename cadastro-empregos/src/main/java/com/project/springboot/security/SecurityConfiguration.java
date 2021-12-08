@@ -16,6 +16,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     public static BCryptPasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
+
     @Override
     protected  void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().anyRequest().authenticated().and().formLogin();
@@ -23,6 +24,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected  void configure(AuthenticationManagerBuilder auth) throws Exception {
+        // Usuario e senha para acesso ao spring security
         auth.inMemoryAuthentication().withUser("user").password(passwordEncoder().encode("password")).authorities("USER");
     }
 

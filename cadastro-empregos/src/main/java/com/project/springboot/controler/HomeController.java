@@ -13,4 +13,6 @@ public class HomeController {
         model.addAttribute("mensagem", "Sistema de cadastro de empregos");
         return "index";
     }
+
+
 }
