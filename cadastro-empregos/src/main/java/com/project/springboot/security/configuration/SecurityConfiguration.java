@@ -1,7 +1,5 @@
 package com.project.springboot.security.configuration;
 
-import com.project.springboot.repository.UsuarioRepository;
-import com.project.springboot.security.services.SSUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +11,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
+import com.project.springboot.repository.UsuarioRepository;
+import com.project.springboot.security.services.SSUserDetailService;
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
@@ -22,8 +23,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-    @Autowired
-    private SSUserDetailService userDetailService;
+//    @Autowired
+//    private SSUserDetailService userDetailService;
 
     @Autowired
     private UsuarioRepository usuarioRepository;

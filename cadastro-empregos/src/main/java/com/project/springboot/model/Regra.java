@@ -19,6 +19,10 @@ public class Regra {
     public Regra(){
 
     }
+    
+    public Regra(String regra){
+    	this.regra = regra;
+    }
 
     public Long getId() {
         return id;

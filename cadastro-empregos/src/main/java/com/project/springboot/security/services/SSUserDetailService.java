@@ -48,6 +48,4 @@ public class SSUserDetailService implements UserDetailsService {
         return authorities;
     }
 
-
-
 }

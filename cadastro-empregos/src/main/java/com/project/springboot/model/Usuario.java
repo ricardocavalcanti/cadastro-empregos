@@ -5,6 +5,9 @@ import java.util.Collection;
 
 @Entity
 public class Usuario {
+	
+	public static final boolean HABILITADO = true;
+	public static final boolean DESABILITADO = false;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
