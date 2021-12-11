@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8">
+    <head th:replace="base-template :: headCust">       
         <title>Spring Boot</title>
-    </head>
+    </head >
     <body> 
-    	<div th:replace="base-template :: navlinks"></div >   	
-        <h1>Bem vindo ao mundo Spring Boot</h1>
-        <p th:text="${mensagem}"></p>
+    	<div th:replace="base-template :: navlinks"></div >     	 	
+        <h1>Bem vindo ao mundo Spring Boot</h1>       
         <br>      
         <div th:replace="base-template :: footer"></div>       
     </body>

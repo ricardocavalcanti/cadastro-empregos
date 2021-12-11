@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-    <head>
+     <head th:replace="base-template :: headCust">
         <meta charset="UTF-8">
         <title>Contato</title>
     </head>
     <body> 
-    	<div th:replace="base-template :: navlinks"></div >   	
-        <h2>Contato Spring Boot</h2>       
+    	<div th:replace="base-template :: navlinks"></div >        
+        <div class="container" style="margin-left: 3px;">
+        	<h2 style="margin-top: 5px;">Entre em contato</h2 > 
+        	<form>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Endereço de email</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+			    <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Senha</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+			  </div>
+			  <div class="form-group" style="margin-top: 2px;">			   		   
+			    <button type="submit" class="btn btn-primary">Enviar</button>
+			  </div>			  
+			</form> 
+        </div >
+        <br>                            
         <div th:replace="base-template :: footer"></div>       
-    </body>
+    </body>    
 </html>
